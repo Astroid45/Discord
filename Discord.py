@@ -9,10 +9,6 @@ from discord.ext import commands
 
 client = commands.Bot(command_prefix="/")
 
-go = ["https://imgur.com/t/kyojuro_rengoku/94wOLtZ","https://img.fireden.net/y/image/1461/65/1461658417773.gif", "https://media.tenor.com/images/eb2a5d3665dbcad3f81872e9df694b6e/tenor.gif", "https://img-egc.xvideos-cdn.com/videos/thumbslll/cb/d0/fc/cbd0fc46be9fd823d41c92b20423d37a/cbd0fc46be9fd823d41c92b20423d37a.15.jpg", "https://tenor.com/view/kimetsu-no-yaiba-demon-slayer-oni-akaza-gif-21494126","https://lotus.paheal.net/_images/ccf334ffb7d81245f70224382d494de6/4063501%20-%20Demon_Slayer%3A_Kimetsu_no_Yaiba%20Nezuko_Kamado%20Tanjiro_Kamado%20animated%20ginhaha.gif", "https://peach.paheal.net/_images/31421b6d656d1fdd36a3a27bd813d5d6/4282257%20-%20Demon_Slayer%3A_Kimetsu_no_Yaiba%20DragonEdit%20Nezuko_Kamado%20Sirfy%20animated%20edit.gif", "https://cdn.discordapp.com/attachments/934649292310839396/939657633663709284/ezgif-7-15c43069b3.gif"]
-
-hard=["https://himg.nl/images/sex/56786d7aa30fb2365f6dc7e035ebeef3/original.gif", "https://himg.nl/images/sex/69be88587d5439607ee691cce5db3f33/original.gif", "https://himg.nl/images/sex/070be93a67b5513b7ae94d34dc5f3cf7/original.gif", "https://himg.nl/images/sex/36c85565dde1ba991ec0c2fe79678449/original.gif", "https://porngifs.xxx/wp-content/uploads/2019/08/bounce-porn-gifs-sex-gif.gif", "https://himg.nl/images/sex/61469425ac43e14f6b7763b1312f0a9a/original.gif"]
-
 @client.event
 async def on_ready():
   y = 'Bot is Ready'
@@ -43,19 +39,8 @@ async def wink(ctx):
   await ctx.send(gif)
 
 @client.command()
-async def colin(ctx):
-  await ctx.send(random.choice(go))
-
-@client.command()
 async def clear(ctx, amount=50):
   await ctx.channel.purge(limit = amount)
-
-@client.command()
-async def Colin(ctx):
-  await ctx.send(random.choice(hard))
-  time.sleep(2)
-  await ctx.send("https://c.tenor.com/QA6mPKs100UAAAAC/caught-in.gif")
-  await ctx.send("Wow!!")
 
 @client.command()
 async def translate(ctx, *, word):
